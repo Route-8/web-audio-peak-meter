@@ -8,9 +8,9 @@ describe('calculateLPFCoefficients functionality', () => {
     expect(coefficients).toHaveLength(48);
   });
   it('returns an array of the specified size (odd)', () => {
-    const coefficients = calculateLPFCoefficients(33, 4);
+    const coefficients = calculateLPFCoefficients(49, 4);
     expect(Array.isArray(coefficients)).toBe(true);
-    expect(coefficients).toHaveLength(33);
+    expect(coefficients).toHaveLength(49);
   });
 });
 

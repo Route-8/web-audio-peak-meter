@@ -6,11 +6,10 @@ class TruePeakProcessor extends AudioWorkletProcessor {
   upsampleFactor: number;
   lpfCoefficients: number[];
   lpfBuffers: number[][];
-  processCount: number;
 
   constructor() {
     super();
-    this.numCoefficients = 33;
+    this.numCoefficients = 49;
     //@ts-ignore
     this.sampleRate = sampleRate;
     this.upsampleFactor = this.sampleRate > 80000 ? 2 : 4;
