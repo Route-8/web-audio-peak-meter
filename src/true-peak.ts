@@ -1,6 +1,6 @@
 export function calculateLPFCoefficients(numCoefficients:number, upsampleFactor: number):number[] {
   const retCoefs = [];
-  const fcRel = 1.0 / (4.0 * upsampleFactor);
+  const fcRel = 1.0 / (2.0 * upsampleFactor);
   const minCoefN = 1 - Math.ceil(numCoefficients / 2);
   const maxCoefN = Math.floor(numCoefficients / 2);
   for (let n = minCoefN; n <= maxCoefN; n++) {

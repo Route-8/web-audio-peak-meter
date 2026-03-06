@@ -36,8 +36,7 @@ describe('truePeakValues functionality', () => {
     expect(Array.isArray(maxes)).toBe(true);
     expect(maxes).toHaveLength(1);
     expect(maxes[0]).toBeCloseTo(1);
-    // note: this is wrong - it should be close to zero
-    expect(dbFromFloat(maxes[0])).toBeCloseTo(0.01);
+    expect(dbFromFloat(maxes[0])).toBeCloseTo(0);
   });
   it('returns expected values from a problem sine wav', () => {
     const upsampleFactor = 4;
@@ -48,7 +47,6 @@ describe('truePeakValues functionality', () => {
     const maxes = truePeakValues([channel], [lpfBuffer], coefficients, upsampleFactor);
     expect(Array.isArray(maxes)).toBe(true);
     expect(maxes).toHaveLength(1);
-    // note: this is wrong - it should be close to zero
-    expect(dbFromFloat(maxes[0])).toBeCloseTo(-4.24);
+    expect(dbFromFloat(maxes[0])).toBeCloseTo(0.13);
   });
 });
