@@ -66,9 +66,6 @@ export class WebAudioPeakMeter {
   }
 
   handleNodePortMessage(ev: MessageEvent) {
-    if (ev.data.type === 'message') {
-      console.log(ev.data.message);
-    }
     if (ev.data.type === 'peaks') {
       const { peaks } = ev.data;
       for (let i = 0; i < this.tempPeaks.length; i += 1) {
